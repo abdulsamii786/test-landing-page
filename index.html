@@ -8,35 +8,151 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
     <title>Landig Page</title>
 </head>
 
 <body>
-    <nav class="p-2" style="background-image: url(./assets/images/banner3.jpg); background-repeat: no-repeat; background-size: cover;">
-
+    <nav class="p-2"
+        style="background-image: url(./assets/images/banner3.jpg); background-repeat: no-repeat; background-size: cover;">
         <div class="bg-white container mx-auto flex items-center justify-between p-3 rounded-full z-1">
             <div class="w-20">
                 <a href=""><img src="./assets/images/routeslogo.svg" alt=""></a>
             </div>
 
-            <ul class="flex justify-between items-center font-bold gap-8">
-                <li><a href="#" class=" text-white py-2 px-5 rounded-full"
-                        style="background-color:#0000fe ;">Examples</a></li>
-                <li><a href="#">Use Cases</a></li>
-                <li><a href="#">Catlog</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Resources</a></li>
-            </ul>
+            <div class="hidden md:flex">
+                <ul class="flex justify-between items-center font-bold gap-8">
+                    <li>
+                        <a href="#" class="text-white py-2 px-5 rounded-full"
+                            style="background-color:#0000fe;">Examples</a>
+                    </li>
+                    <li class="relative group">
+                        <a href="#" class="text-black">Use Cases</a>
+                        <ul class="absolute left-0 hide bg-white shadow-lg ">
+                            <li class=""><a href="#" class="flex flex-col items-center block px-4 py-2"> <img
+                                        class="w-12" src="./assets/images/menu-pricing1.svg" alt="">Brands</a></li>
+                            <li><a href="#" class="flex flex-col items-center px-4 py-2"> <img class="w-12"
+                                        src="./assets/images/menu-pricing2.svg" alt="">Agencies</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="text-black">Catlog</a>
+                    </li>
+                    <li class="relative group">
+                        <a href="#" class="text-black">Pricing</a>
+                        <ul class="absolute left-0 hide bg-white shadow-lg ">
+                            <li class=""><a href="#" class="flex flex-col items-center block px-4 py-2"> <img
+                                        class="w-12" src="./assets/images/menu-pricing1.svg" alt="">Brands</a></li>
+                            <li><a href="#" class="flex flex-col items-center px-4 py-2 text-center"> <img class="w-12"
+                                        src="./assets/images/menu-pricing3.svg" alt="">Full Services</a></li>
+                            <li class=""><a href="#" class="flex flex-col items-center block px-4 py-2"> <img
+                                        class="w-12" src="./assets/images/menu-pricing1.svg" alt="">Paccks</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group">
+                        <a href="#" class="text-black">Resources</a>
+                        <ul class="absolute left-0 hide bg-white shadow-lg ">
+                            <li class=""><a href="#" class="flex flex-col items-center block px-4 py-2 text-center">
+                                    <img class="object-contain w-20 h-20" src="./assets/images/menu-podcast.webp"
+                                        alt="">Marketers Test</a></li>
+                            <li><a href="#" class="flex flex-col items-center px-4 py-2 text-center"> <img class="w-20"
+                                        src="./assets/images/menu-resources-img.webp" alt="">Full Services</a></li>
+                            <li class="flex">
+                                <ul>
+                                    <li><a href="#" class="flex flex-col items-center px-4 py-2 text-center">Contact</a>
+                                    </li>
+                                    <li><a href="#" class="flex flex-col items-center px-4 py-2 text-center">About Us</a>
+                                    </li>
+                                    <li><a href="#" class="flex flex-col items-center px-4 py-2 text-center">Integration</a>
+                                    </li>
+                                    <li><a href="#" class="flex flex-col items-center px-4 py-2 text-center">Partners</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#" class="flex flex-col items-center px-4 py-2 text-center">Help Center</a>
+                                    </li>
+                                    <li><a href="#" class="flex flex-col items-center px-4 py-2 text-center">Blog</a>
+                                    </li>
+                                    <li><a href="#" class="flex flex-col items-center px-4 py-2 text-center">Mobile First Ebook</a>
+                                    </li>
+                                    <li><a href="#" class="flex flex-col items-center px-4 py-2 text-center">Rules Generator</a>
+                                    </li>
+                                </ul>
+                            </li>
 
-            <ul class="flex justify-between items-center font-bold gap-8">
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hidden md:flex">
+                <ul class="flex justify-between items-center font-bold gap-8">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#" class="text-white py-2 px-5 rounded-full" style="background-color:#0000fe;">Get a
+                            Demo</a></li>
+                </ul>
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button id="hamburger" class="focus:outline-none">
+                    <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hide md:hidden">
+            <ul class="flex flex-col items-center font-bold gap-4 p-4 bg-white">
+                <li class=""><a href="#" class="text-white py-2 px-5 rounded-full"
+                        style="background-color:#0000fe;">Examples</a>
+                </li>
+                <li class="relative group text-center">
+                    <a href="#">Use Cases</a>
+                    <ul class=" hide mt-2 bg-white shadow-lg flex flex-col items-center">
+                        <li><a href="#" class="block px-4 py-2">Brands</a></li>
+                        <li><a href="#" class="block px-4 py-2">Agencies</a></li>
+                    </ul>
+                </li>
+                <li class="relative group text-center">
+                    <a href="#">Catalog</a>
+                </li>
+
+                <li class="relative group text-center">
+                    <a href="#">Pricing</a>
+                    <ul class=" hide mt-2 bg-white shadow-lg flex flex-col items-center">
+                        <li><a href="#" class="block px-4 py-2">Brands</a></li>
+                        <li><a href="#" class="block px-4 py-2"> AgeFull Service</a></li>
+                        <li><a href="#" class="block px-4 py-2"> Pack</a></li>
+                    </ul>
+                </li>
+                <li class="relative group text-center ">
+                    <a href="#">Resources</a>
+                    <ul class="hide mt-2 bg-white shadow-lg flex flex-col items-center">
+                        <li><a href="#" class="block px-4 py-2">Contact</a></li>
+                        <li><a href="#" class="block px-4 py-2">About Us</a></li>
+                        <li><a href="#" class="block px-4 py-2">Integration</a></li>
+                        <li><a href="#" class="block px-4 py-2">Partners</a></li>
+                        <li><a href="#" class="block px-4 py-2">Help Center</a></li>
+                        <li><a href="#" class="block px-4 py-2">Blog</a></li>
+                        <li><a href="#" class="block px-4 py-2">Mobile-first Ebook</a></li>
+                        <li><a href="#" class="block px-4 py-2">Rules generator</a></li>
+
+                    </ul>
+                </li>
                 <li><a href="#">Login</a></li>
-                <li><a href="#" class=" text-white py-2 px-5 rounded-full" style="background-color:#0000fe ;">Get a
+                <li><a href="#" class="text-white py-2 px-5 rounded-full" style="background-color:#0000fe;">Get a
                         Demo</a></li>
-
             </ul>
-
         </div>
     </nav>
+
+
+
+
+
 
 
     <div class="container mx-auto flex items-center flex-col">
@@ -50,7 +166,7 @@
             Delivering creative & digital solutions that drive results
         </sapn>
         <div class="p-2 w-full mt-4">
-            <video controls autoplay loop muted class="w-full" >
+            <video controls autoplay loop muted class="w-full">
                 <source class="" src="./assets/images/860x500.mp4" type="video/mp4">
             </video>
         </div>
@@ -187,6 +303,8 @@
 
 
     </footer>
+
+    <script src="./assets/js/main.js"></script>
 
 </body>
 
